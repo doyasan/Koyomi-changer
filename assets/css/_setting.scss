@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/*================================
+	サイトごとに設定
+=================================*/
+
+// WebFont設定
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap");
+// フォント設定
+
+$font: "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+$font1: "Oswald", sans-serif;
+$font-size: 16;
+
+// 基本
+$lineHeight: 1.6;
+
+// 基本カラー設定
+$cl0: #1d1d1d;
+$cl1: #043665;
+$cl2: #f7653b;
+
+// ブレイクポイント
+
+@mixin bp {
+  @media (min-width: 600px) and (max-width: 959px) {
+    @content;
+  }
+}
+
+@mixin media-pc {
+  @media (min-width: (768px)) {
+    @content;
+  }
+}
+
+@mixin media-sp {
+  @media (max-width: (767px)) {
+    @content;
+  }
+}
+
+@mixin media-tb {
+  @media (max-width: (999px)) {
+    @content;
+  }
+}
+
+// 三角形
+
+@mixin tri($width, $height, $color) {
+  border-left: ($width / 2) solid transparent;
+  border-right: ($width / 2) solid transparent;
+  border-bottom: $height solid $color;
+  border-top: 0 solid transparent;
+}
+
+@mixin tri2($width, $height, $color) {
+  border-left: ($width / 2) solid transparent;
+  border-right: ($width / 2) solid transparent;
+  border-top: $height solid $color;
+  border-bottom: 0 solid transparent;
+}
+
+@mixin tri3($width, $height, $color) {
+  border-top: ($width / 2) solid transparent;
+  border-bottom: ($width / 2) solid transparent;
+  border-right: 0 solid transparent;
+  border-left: $height solid $color;
+}
+
+@mixin tri4($width, $height, $color) {
+  border-top: ($width / 2) solid transparent;
+  border-bottom: ($width / 2) solid transparent;
+  border-right: $height solid $color;
+  border-left: 0 solid transparent;
+}

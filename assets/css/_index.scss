@@ -1,0 +1,64 @@
+/*****************************************
+temp
+*****************************************/
+#koyomi-changer {
+    padding: 30px;
+    .container {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        & > * {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 30px;
+}
+
+#btn-seireki {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #444;
+    font-size: 30px;
+    border-radius: 50%;
+}
+
+#wareki,#seireki,#warekiNum {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    padding: 1px 8px;
+    min-height: 30px;
+    text-align: center;
+    font-size: 16px;
+    background-color: #ddd;
+    border: none; /*枠線非表示*/
+    outline: none; /*フォーカス時の枠線非表示*/
+    box-sizing: border-box; /*横幅の解釈をpadding, borderまでとする*/
+    white-space: nowrap;
+}
+
+#seireki {
+    width: 56px;
+}
+
+#wareki {
+    width: 48px;
+}
+
+#warekiNum {
+    width: 36px;
+}
+
+.seireki-wrap, .wareki-wrap{
+    display: inline-flex;
+    align-items: center;
+}
